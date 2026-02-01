@@ -1,0 +1,20 @@
+We will be using ->
+
+1) NODE.JS -> fast event driven core.
+2) Express -> handshake + REST APIs.
+3) WS Library -> native websockets.
+4) PostgreSQL -> Database (storing sport matches and commentaries [here])
+5) Drizzle ORM -> type safety DB interactions.
+6) Arcjet -> secure real-time system, blocking bots, rate limit  abuse, and stopping DDOS attempts before it even hit logic!
+7) React -> high performance UI 
+8) Site24/7 -> monitor server health, UX, N/w latency
+
+
+What tool to choose ?
+
+SOCKET.IO (library) OR WS LIBRARY OR PUSHER(websocket service) OR ABLY (websocket service)
+
+
+1) socket.io -> most pouplar and real time lib in node.js and gives full mgt suite BUT heavier (u ship extra client code, and every msg coems with extra overhead)
+2) pusher&ably -> u dont host server u just pay and it scales, eziest path BUT loose control+costly 
+3) WS -> low level but fast with minimal overhead  and matches browser websocket API closely BUT u build feature urself (rooms,reconnection,heartbeats full mgt u do) but if low latency and performance matter then u gotta do it!
