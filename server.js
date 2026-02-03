@@ -24,8 +24,8 @@ wss.on('connection', (socket,request) => {
 
         //get current list of all active sockets
         wss.clients.forEach(client => {
-            if(client.readyState === WebSocket.OPEN) {
-                client.send(`Server broadcasting...: ${message}`);
+            if(client !== socket && client.readyState === WebSocket.OPEN) {
+                client.send(`Server broadcasting...: ${data}`);
             }
         })
     });
